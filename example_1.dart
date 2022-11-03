@@ -23,7 +23,7 @@ class TableApp extends StatelessWidget {
           columnBuilder: (int column) {
             return TableSpan(
               extent: FixedTableSpanExtent(100),
-              decoration: TableSpanDecoration(
+              backgroundDecoration: TableSpanDecoration(
                 border: TableSpanBorder(
                   trailing: BorderSide(
                    color: Colors.black,
