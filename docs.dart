@@ -57,10 +57,36 @@ class TableView extends RawTableView {
   /// If null, the number of rows will be double.infinity.
   int? columnCount;
   
+  /// The number of columns that are permanently shown on the edge of
+  /// the viewport.
+  ///
+  /// If scrolling is enabled, other columns will scroll underneath the pinned
+  /// columns.
+  ///
+  /// Just like for regular columns, [columnBuilder] will be consulted for
+  /// additional information about the pinned column. The indices of pinned columns
+  /// start at zero and go to `pinnedColumnCount - 1`.
+  ///
+  /// Must be smaller than (or equal to) the [columnCount].
+  int? pinnedColumnCount;
+  
   /// The number of rows in the table.
   ///
   /// If null, the number of rows will be double.infinity.
   int? rowCount;
+  
+  /// The number of rows that are permanently shown on the edge of
+  /// the viewport.
+  ///
+  /// If scrolling is enabled, other rows will scroll underneath the pinned
+  /// rows.
+  ///
+  /// Just like for regular rows, [rowBuilder] will be consulted for
+  /// additional information about the pinned row. The indices of pinned rows
+  /// start at zero and go to `pinnedRowCount - 1`.
+  ///
+  /// Must be smaller than (or equal to) the [rowCount].
+  int? pinnedRowCount;
 }
 
 /// Signature for a function that creates a TableSpan for a given index of row or
@@ -72,9 +98,6 @@ typedef TableCellBuilder = Widget Function(BuildContext context, int row, int co
 
 /// Defines the extent and visual appearance of a row or
 /// column in a [TableView].
-///
-/// A span refers to either a column or a row in a table.
-/// Span? Or Vector, Band…?
 class TableSpan {
   /// Creates a [TableSpan].
   ///
