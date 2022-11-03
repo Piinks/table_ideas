@@ -20,7 +20,7 @@ class TableApp extends StatelessWidget {
           cellBuilder: (BuildContext context, int column, int row) {
             return Center(child: Text('Cell $column : $row'));
           },
-          numberOfColumns: 3,
+          columnCount: 3,
           columnBuilder: (int column) {
             late final TableSpanExtent extent;
             
@@ -47,7 +47,7 @@ class TableApp extends StatelessWidget {
               )
             );
           },
-          numberOfRows: 10,
+          rowCount: 10,
           rowBuilder: (int row) {
             return TableSpan(
               extent: row.isEven ? FixedTableSpanExtent(150) : FixedTableSpanExtent(200),
