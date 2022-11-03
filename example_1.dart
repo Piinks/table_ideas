@@ -37,7 +37,7 @@ class TableApp extends StatelessWidget {
           rowBuilder: (int row) {
             return TableSpan(
               extent: FixedTableSpanExtent(100),
-              decoration: TableSpanDecoration(
+              backgroundDecoration: TableSpanDecoration(
                 color: Colors.blueAccent,
               ),
             );
