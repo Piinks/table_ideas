@@ -38,14 +38,23 @@ class TableApp extends StatelessWidget {
                 );
             }
             
-            return TableSpan(extent: extent);
+            return TableSpan(
+              extent: extent,
+              backgroundDecoration: TableSpanDecoration(
+                border: TableSpanBorder(
+                  trailing: BorderSide(color: Colors.amber),
+                ),
+              )
+            );
           },
           numberOfRows: 10,
           rowBuilder: (int row) {
             return TableSpan(
               extent: row.isEven ? FixedTableSpanExtent(150) : FixedTableSpanExtent(200),
-              decoration: TableSpanDecoration(
-                color: Colors.blueAccent,
+              backgroundDecoration: TableSpanDecoration(
+                border: TableSpanBorder(
+                  leading: BorderSide(color: Colors.indigo),
+                )
               ),
             );
           },
