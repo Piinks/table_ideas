@@ -24,7 +24,7 @@ class TableApp extends StatelessWidget {
             return TableSpan(
               extent: FixedTableSpanExtent(100),
               decoration: TableSpanDecoration(
-                border: RawTableBandBorder(
+                border: TableSpanBorder(
                   trailing: BorderSide(
                    color: Colors.black,
                    width: 2,
