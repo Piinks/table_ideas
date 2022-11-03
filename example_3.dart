@@ -20,8 +20,8 @@ class TableApp extends StatelessWidget {
           cellBuilder: (BuildContext context, int column, int row) {
             return Center(child: Text('Cell $column : $row'));
           },
-          numberOfColumns: 6,
-          numberOfPinnedColums: 1,
+          columnCount: 6,
+          pinnedColumnCount: 1,
           columnBuilder: (int column) {
             final TableSpanExtent extent = column.isEven
               ? MaxTableSpanExtent(
@@ -30,15 +30,20 @@ class TableApp extends StatelessWidget {
                 )
               : FixedTableSpanExtent(120);
             
-            return TableSpan(extent: extent);
+            return TableSpan(
+              extent: extent,
+              backgroundDecoration: TableSpanDecoration(
+                color: column == 0 ? Colors.amberAccent[200] : null,
+              ),
+            );
           },
-          numberOfRows: 10,
-          numberOfPinnedRows: 2,
+          rowCount: 10,
+          pinnedRowCount: 2,
           rowBuilder: (int row) {
             return TableSpan(
-              extent: row.isEven ? FixedTableSpanExtent(150) : FixedTableSpanExtent(200),
-              decoration: TableSpanDecoration(
-                color: Colors.amberAccent,
+              extent: row.isEven ? FixedTableSpanExtent(52) : FixedTableSpanExtent(80),
+              backgroundDecoration: TableSpanDecoration(
+                color: row < 2 ? Colors.amberAccent[400] : null,
               ),
             );
           },
