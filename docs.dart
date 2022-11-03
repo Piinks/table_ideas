@@ -22,7 +22,9 @@ class TableView extends RawTableView {
     required TableSpanBuilder columnBuilder,
     required TableSpanBuilder rowBuilder,
     int? columnCount,
+    int? pinnedColumnCount,
     int? rowCount,
+    int? pinnedRowCount,
   });
  
   /// A ScrollController for the horizontal axis of the table.
