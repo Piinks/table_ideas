@@ -11,10 +11,6 @@
 /// to exactly one row and one column. The table supports lazy rendering and
 /// will only instantiate those cells, that are currently visible in the
 /// table's viewport.
-///
-/// The layout of the table (e.g. how many rows/columns there are and their
-/// extents) as well as the content of the individual cells is defined by
-/// the provided [delegate].
 class TableView extends RawTableView {
   /// Creates a scrollable, two dimensional table of widgets that are
   /// created on demand.
