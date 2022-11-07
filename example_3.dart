@@ -33,7 +33,7 @@ class TableApp extends StatelessWidget {
             return TableSpan(
               extent: extent,
               backgroundDecoration: TableSpanDecoration(
-                color: column == 0 ? Colors.amberAccent[200] : null,
+                color: column == 0 ? Colors.blueAccent[100] : null,
               ),
             );
           },
