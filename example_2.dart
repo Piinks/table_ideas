@@ -26,13 +26,13 @@ class TableApp extends StatelessWidget {
             
             switch (column) {
               case 0:
-                extent = FixedTableSpanExtent(50);
+                extent = FixedTableSpanExtent(150);
                 break;
               case 1:
                 extent = FractionalTableSpanExtent(0.6);
                 break;
               case 2:
-                extent = CombiningTableSpanExtent(
+                extent = MinTableSpanExtent(
                   FixedTableSpanExtent(145),
                   RemainingTableSpanExtent(),
                 );
