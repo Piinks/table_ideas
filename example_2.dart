@@ -24,7 +24,7 @@ class TableApp extends StatelessWidget {
           columnBuilder: (int column) {
             late final TableSpanExtent extent;
             
-            switch (column % 3) {
+            switch (column) {
               case 0:
                 extent = FixedTableSpanExtent(50);
                 break;
